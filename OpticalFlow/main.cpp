@@ -9,8 +9,8 @@ int main() {
 	cv::Mat m_Gray1, m_Gray2;
 	jun::Opt m_Optical;
 
-	m_Img1 = cv::imread("stereo001L.jpg");
-	m_Img2 = cv::imread("stereo001R.jpg");
+	m_Img1 = cv::imread("stereo002L.jpg");
+	m_Img2 = cv::imread("stereo002R.jpg");
 	cv::resize(m_Img1, m_Img1, cv::Size(), 0.5, 0.5);
 	cv::resize(m_Img2, m_Img2, cv::Size(), 0.5, 0.5);
 
@@ -71,7 +71,7 @@ int main() {
 	// 점들의 흐름(변화량)으로 변환행렬을 구해 2번이미지를 와프 스켜본다.
 	// 잘 구해졌다면 1번과 비슷한 이미지로 와프돼야 한다.
 	cv::Mat m_WarpImg;
-	cv::Mat m_RigidTransform = cv::estimateRigidTransform(m_Img2, m_Img1, true);
+	cv::Mat m_RigidTransform = cv::estimateRigidTransform(m_Pts2, m_Pts1, true);
 	cv::warpAffine(m_Img2, m_WarpImg, m_RigidTransform, cv::Size());
 	cv::namedWindow("warp");
 	cv::moveWindow("warp", 10 + m_Img1.cols * 2, 35 + m_FlowImg.rows);
