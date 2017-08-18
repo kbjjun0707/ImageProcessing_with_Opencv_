@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D6319B8A-6C4D-497C-8AE0-89A3110B8E71}</ProjectGuid>
+    <ProjectGuid>{C34680F8-B66F-4E87-8975-F0813F8D2F4D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>PutText</RootNamespace>
+    <RootNamespace>cartoonify</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
